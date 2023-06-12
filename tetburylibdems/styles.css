@@ -1,0 +1,90 @@
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a modern font */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Set background color and center content */
+body {
+  background-color: #f8f8f8;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Add some padding and limit container width */
+.container {
+  padding: 20px;
+  max-width: 600px; /* Adjust the value to your desired width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Style the heading */
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Style the image */
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.img-container img {
+  max-width: 600px;
+  height: auto;
+}
+
+/* Style the text */
+p {
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+/* Reset default browser styles */
+dl, dd, dt {
+  margin: 0;
+  padding: 0;
+}
+
+/* Modern styling for <dl> using CSS Grid */
+dl {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-block: 20px;
+}
+
+/* Modern styling for <dd> */
+dd {
+  margin: 0;
+}
+
+/* Modern styling for <dt> */
+dt {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Optional: Add a border between <dt> and <dd> */
+dt, dd {
+  border-top: 1px solid #ccc;
+  padding-block: 10px;
+}
