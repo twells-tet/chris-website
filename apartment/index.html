@@ -32,7 +32,6 @@
     .hero h1 { margin-top: 1.75rem; }
     .hero-location { color: var(--yellow); font-weight: 700; }
     .photo-button { display: inline-block; margin-top: 1rem; padding: 0.7rem 1rem; border: 0; background: #ffffff; color: var(--navy); font: inherit; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
-    .photos-coming-soon { margin: 0.5rem 0 0; color: var(--white); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
     .yield { color: var(--yellow); font-weight: 800; }
     .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: -1px; background: rgba(255, 255, 255, 0.25); }
     .metric { padding: 1.3rem; background: var(--navy); }
@@ -86,15 +85,14 @@
     <img class="hero-image" src="xq7-apartments.jpg" alt="XQ7 Apartments, Manchester">
     <div class="container">
       <p class="eyebrow">UK PROPERTY INVESTMENT OPPORTUNITY | MANCHESTER</p>
-      <h1>&pound;150,000</h1>
+      <h1>&pound;155,000</h1>
       <p class="hero-location">Short walk to Old Trafford, home of Manchester United F.C.</p>
       <button id="photos-button" class="photo-button" type="button">View All Photos</button>
-      <p id="photos-coming-soon" class="photos-coming-soon" hidden>Coming soon</p>
     </div>
   </header>
 
   <section class="metrics metrics--summary" aria-label="Investment summary">
-    <div class="metric"><strong>9.2% gross yield - &pound;1150 pcm rental income</strong></div>
+    <div class="metric"><strong>8.9% gross yield - &pound;1150 pcm rental income</strong></div>
   </section>
 
   <main>
@@ -105,12 +103,13 @@
           <h2>Investment highlights</h2>
           <ul class="highlights">
             <li><strong>2-bedroom, 2 bathroom 8th-floor apartment with balcony views over Manchester Ship Canal towards Old Trafford</strong></li>
-            <li><strong>Purchase price: &pound;150,000</strong></li>
+            <li><strong>Postcode: M5 3FP</strong></li>
+            <li><strong>Purchase price: &pound;155,000</strong></li>
             <li><strong>Current rent: &pound;1,150 per month</strong></li>
             <li><strong>Annual rental income: &pound;13,800</strong></li>
-            <li><strong>Gross rental yield: 9.2%</strong></li>
+            <li><strong>Gross rental yield: 8.9%</strong></li>
             <li><strong>Service charge estimate 2027/28: &pound;220 per month</strong></li>
-            <li><strong>Yield after service charge: approximately 7.4%</strong></li>
+            <li><strong>Yield after service charge: approximately 7.2%</strong></li>
             <li><strong>Existing tenant — immediate rental income</strong></li>
             <li><strong>Approximately 227 years remaining on the lease</strong></li>
             <li><strong>EWS1 Certificate dated 11 August 2026</strong></li>
@@ -122,7 +121,7 @@
         <aside class="section contact">
           <h2>Investment enquiry</h2>
           <p>This property is offered with an existing tenant, making it particularly suitable for a buyer seeking an income-producing asset rather than an owner-occupier home.</p>
-          <button id="email-button" class="button" type="button">Reveal Enquiry Email</button>
+          <button id="email-button" class="button" type="button">Enquiry Email</button>
           <p id="email-copy" class="email-copy" hidden>chris@trinitystreetcomms.co.uk</p>
         </aside>
       </div>
@@ -137,7 +136,7 @@
         <p>Salford Quays has undergone significant regeneration and is now an established residential, business and media destination.</p>
         <p>The property's proximity to <strong>Old Trafford and Manchester United's world-famous stadium</strong> provides an additional international appeal, particularly for buyers familiar with Manchester through football.</p>
         <h2>An accessible UK investment</h2>
-        <p>At <strong>&pound;150,000</strong>, the property offers an attractive entry point into the UK residential property market while providing an established rental income of <strong>&pound;13,800 per year</strong>.</p>
+        <p>At <strong>&pound;155,000</strong>, the property offers an attractive entry point into the UK residential property market while providing an established rental income of <strong>&pound;13,800 per year</strong>.</p>
         <p>Suitable for investors seeking:</p>
         <ul class="suitability-list">
           <li>✔ Rental income</li>
@@ -146,11 +145,11 @@
           <li>✔ A property in an internationally recognised location</li>
         </ul>
         <div class="price-summary">
-          <p><strong>Price</strong>&pound;150,000</p>
+          <p><strong>Price</strong>&pound;155,000</p>
           <p><strong>Current rent</strong>&pound;1,150 pcm</p>
-          <p><strong>Gross yield</strong>9.2%</p>
+          <p><strong>Gross yield</strong>8.9%</p>
         </div>
-        <p class="disclaimer">Figures shown before mortgage costs, tax, management, maintenance, insurance and other property expenses. The 7.4% figure is rent less the stated 2027/28 service charge estimate and is not a net yield.</p>
+        <p class="disclaimer">Figures shown before mortgage costs, tax, management, maintenance, insurance and other property expenses. The 7.2% figure is rent less the stated 2027/28 service charge estimate and is not a net yield.</p>
       </section>
     </div>
   </main>
@@ -161,7 +160,6 @@
     const emailButton = document.getElementById("email-button");
     const emailCopy = document.getElementById("email-copy");
     const photosButton = document.getElementById("photos-button");
-    const photosComingSoon = document.getElementById("photos-coming-soon");
     let photosComingSoonTimer;
 
     emailButton.addEventListener("click", () => {
@@ -170,10 +168,10 @@
     });
 
     photosButton.addEventListener("click", () => {
-      photosComingSoon.hidden = false;
+      photosButton.textContent = "Coming Soon";
       window.clearTimeout(photosComingSoonTimer);
       photosComingSoonTimer = window.setTimeout(() => {
-        photosComingSoon.hidden = true;
+        photosButton.textContent = "View All Photos";
       }, 3000);
     });
 
@@ -188,7 +186,7 @@
 
     L.marker(propertyLocation)
       .addTo(map)
-      .bindPopup("XQ7 Apartments, Manchester")
+      .bindPopup("XQ7 Apartments, M5 3FP")
       .openPopup();
 
     const manchesterUnitedIcon = L.divIcon({
