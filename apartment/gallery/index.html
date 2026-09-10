@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Photo gallery for the XQ7 Apartments investment opportunity.">
-  <title>XQ7 Apartments Gallery</title>
+  <title>Gallery</title>
   <style>
     :root { --navy: #0a1a3e; --yellow: #f7c948; --white: #ffffff; --surface: #f4f6fb; }
     * { box-sizing: border-box; }
@@ -18,20 +18,20 @@
     figure { margin: 0; background: var(--white); }
     img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
     figcaption { padding: 0.7rem 1rem; color: var(--navy); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-align: left; text-transform: uppercase; }
-    .back-link { display: inline-block; margin-top: 2rem; color: var(--white); font-weight: 700; }
+    .back-link { display: inline-block; margin-bottom: 2rem; padding: 0.7rem 1rem; background: var(--white); color: var(--navy); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
     @media (max-width: 620px) { .photo-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <main>
     <section class="gallery">
-      <p class="eyebrow">XQ7 APARTMENTS | M5 3FP</p>
-      <h1>Property gallery</h1>
-      <p>Explore the apartment's bedrooms, kitchen, dining area and shower room.</p>
+      <a class="back-link" href="../">Back to listing</a>
+      <p class="eyebrow">APT 804, XQ7 BUILDING | M5 3FP</p>
+      <h1>Gallery</h1>
       <div class="photo-grid">
         <figure>
           <img src="images/bedroom-evening.png" alt="Bedroom with a double bed and city view at night">
-          <figcaption>Master bedroom</figcaption>
+          <figcaption>Bedroom 2</figcaption>
         </figure>
         <figure>
           <img src="images/kitchen.png" alt="Fitted kitchen with integrated appliances">
@@ -43,7 +43,7 @@
         </figure>
         <figure>
           <img src="images/bedroom-daytime.png" alt="Bedroom with a daytime view from the window">
-          <figcaption>Bedroom 1</figcaption>
+          <figcaption>Bedroom 2</figcaption>
         </figure>
         <figure>
           <img src="images/shower-room.png" alt="Tiled shower room">
@@ -67,7 +67,7 @@
         </figure>
         <figure>
           <img src="images/second-bedroom.png" alt="Second bedroom with double bed and wardrobe">
-          <figcaption>Bedroom 2</figcaption>
+          <figcaption>Master bedroom</figcaption>
         </figure>
         <figure>
           <img src="images/building-lobby.png" alt="XQ7 building lobby with stairway">
@@ -78,7 +78,6 @@
           <figcaption>External</figcaption>
         </figure>
       </div>
-      <a class="back-link" href="../">Return to investment details</a>
     </section>
   </main>
 </body>
