@@ -87,7 +87,7 @@
       <p class="eyebrow">UK PROPERTY INVESTMENT OPPORTUNITY | MANCHESTER</p>
       <h1>&pound;155,000</h1>
       <p class="hero-location">Short walk to Old Trafford, home of Manchester United F.C.</p>
-      <button id="photos-button" class="photo-button" type="button">View All Photos</button>
+      <a class="photo-button" href="gallery/">View All Photos</a>
     </div>
   </header>
 
@@ -159,20 +159,10 @@
   <script>
     const emailButton = document.getElementById("email-button");
     const emailCopy = document.getElementById("email-copy");
-    const photosButton = document.getElementById("photos-button");
-    let photosComingSoonTimer;
 
     emailButton.addEventListener("click", () => {
       emailButton.textContent = "Email Chris Green";
       emailCopy.hidden = false;
-    });
-
-    photosButton.addEventListener("click", () => {
-      photosButton.textContent = "Coming Soon";
-      window.clearTimeout(photosComingSoonTimer);
-      photosComingSoonTimer = window.setTimeout(() => {
-        photosButton.textContent = "View All Photos";
-      }, 3000);
     });
 
     const propertyLocation = [53.4679209, -2.2811861];
